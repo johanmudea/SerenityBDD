@@ -1,2 +1,3 @@
 # SerenityBDD
-Reto de automatización Serenity BDD Servicios Rest
+Reto de automatizacion Serenity BDD Servicios Rest.
+" ejercicios al azar y 2 escenarios de prueba efectivos por cada servicio seleccionado.
