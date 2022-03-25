@@ -7,8 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberSerenityRunner.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/soap/currencyName.feature"},
-        glue = {"co.com.sofka.stepdefinition.soap"}
+        features = {"src/test/resources/features/update.feature"},
+        glue = {"co.com.sofka.stepdefinitions.update"}
 )
 public class UpdateTest {
 }

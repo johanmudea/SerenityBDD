@@ -8,6 +8,8 @@ public class ServiceSetUp {
     protected static final String BASE_URI = "https://reqres.in/api";
     protected static final String RESOURCE_SINGLE_USER = "/users/2";
     protected static final String RESOURCE_LOGIN = "/login";
+    protected static final String RESOURCE_UPDATE = "/users/2";
+
 
     protected void generalSetUp(){
         setUpLog4j2();
