@@ -24,7 +24,7 @@ import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeT
 public class UpdateClassStepDefinition extends ServiceSetUp {
 
     private static final String UPDATE_FILE = System.getProperty("user.dir") + "\\src\\test\\resources\\files\\update.json";
-
+    private static final String UPDATE_FILE2 = System.getProperty("user.dir") + "\\src\\test\\resources\\files\\prueba.xml";
 
     private static final Logger LOGGER = Logger.getLogger(UpdateClassStepDefinition.class);
 
@@ -40,7 +40,6 @@ public class UpdateClassStepDefinition extends ServiceSetUp {
         generalSetUp();
         actor.can(CallAnApi.at(BASE_URI));
         headers.put("content-Type", ContentType.JSON);
-        LOGGER.info(ContentType.JSON);
 
 
         bodyRequest = defineBodyRequest(name, job);
@@ -75,11 +74,60 @@ public class UpdateClassStepDefinition extends ServiceSetUp {
 
     }
 
+    @Given("el usuario esta en la pagina web con name {string} y el job {string}")
+    public void elUsuarioEstaEnLaPaginaWebConNameYElJob(String name, String job) {
+
+        generalSetUp();
+        actor.can(CallAnApi.at(BASE_URI));
+        headers.put("content-Type", ContentType.JSON);
+
+
+        bodyRequest = defineBodyRequestprueba(name, job);
+        LOGGER.info(bodyRequest);
+
+
+    }
+
+    @When("cuando el usuario hace una solicitud de actualizacion con archivo xml")
+    public void cuandoElUsuarioHaceUnaSolicitudDeActualizacionConArchivoXml() {
+
+        actor.attemptsTo(
+                doPut()
+                        .usingTheResource(RESOURCE_UPDATE)
+                        .withHeaders(headers)
+                        .andBodyRequest(bodyRequest)
+
+        );
+
+    }
+
+    @Then("se debera ver un codigo de respuesta Bad Request  status.")
+    public void seDeberaVerUnCodigoDeRespuestaBadRequestStatus() {
+
+        LastResponse.received().answeredBy(actor).prettyPrint();
+
+        actor.should(
+                seeThatResponse("El status deberia ser: " + HttpStatus.SC_BAD_REQUEST,
+                        validatableResponse -> validatableResponse.statusCode(HttpStatus.SC_BAD_REQUEST)
+                ),
+                seeThat("La respuesta deberia no ser nula: ", response(), Matchers.notNullValue())
+        );
+
+
+    }
+
 
     private String defineBodyRequest(String name, String job){
         return readFile(UPDATE_FILE)
                 .replace(UpdateKeys.NAME.getValue(), name)
         .replace(UpdateKeys.JOB.getValue(), job);
     }
+
+    private String defineBodyRequestprueba(String name, String job){
+        return readFile(UPDATE_FILE2)
+                .replace(UpdateKeys.NAME.getValue(), name)
+                .replace(UpdateKeys.JOB.getValue(), job);
+    }
+
 
 }

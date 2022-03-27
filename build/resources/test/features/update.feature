@@ -9,4 +9,9 @@ Feature: actualizacion de datos
     When  cuando el usuario hace una solicitud de actualizacion
     Then  se debera ver un codigo de respuesta exitoso status.
 
-    
+    Scenario: Envio de formato incorrecto
+        Given el usuario esta en la pagina web con name "morpheus" y el job "zion_resident"
+        When  cuando el usuario hace una solicitud de actualizacion con archivo xml
+        Then  se debera ver un codigo de respuesta Bad Request  status.
+
+

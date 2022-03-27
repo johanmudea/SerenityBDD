@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="actualizacion de datos" skipped="0" tests="1" time="4.48" timestamp="2022-03-26 11:27:07"><testcase name="actualizacion exitosa"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="actualizacion de datos" skipped="0" tests="2" time="6.29" timestamp="2022-03-27 04:43:20"><testcase name="actualizacion exitosa"/><testcase name="Envio de formato incorrecto"/></testsuite>
