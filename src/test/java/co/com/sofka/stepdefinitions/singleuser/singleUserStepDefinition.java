@@ -10,7 +10,6 @@ import net.serenitybdd.screenplay.rest.questions.LastResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.entity.ContentType;
 import org.apache.log4j.Logger;
-import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 
 

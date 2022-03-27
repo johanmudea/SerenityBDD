@@ -9,6 +9,7 @@ public class ServiceSetUp {
     protected static final String RESOURCE_SINGLE_USER = "/users/2";
     protected static final String RESOURCE_LOGIN = "/login";
     protected static final String RESOURCE_UPDATE = "/users/2";
+    protected static final String DELETE = "/users/2";
 
 
     protected void generalSetUp(){
