@@ -1,3 +1,27 @@
 
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+i
+9src/test/java/co/com/sofka/runners/delete/DeleteTest.java,2\8\28702c3f458ff8372041986fcddc16a2e8ce07c3
+s
+Csrc/test/java/co/com/sofka/stepdefinitions/common/ServiceSetUp.java,f\3\f3048ae1f6c191b1daed0ddb3c4d97e6c38f045a
+b
+2src/main/java/co/com/sofka/util/FileUtilities.java,1\e\1e18e00760cd396886eb24b9e58b7959a47fc7f6
+Z
+*src/main/java/co/com/sofka/task/DoGet.java,f\0\f0c8128a4ee4ac376d53eaf30bdc6cd1ddaf844d
+e
+5src/main/java/co/com/sofka/questions/APIResponse.java,7\b\7b0866a2bd218fea94bef4baea35c6fb0a2e51ba
+Z
+*src/main/java/co/com/sofka/task/DoPut.java,e\2\e209318cd18db6d8a4b6eebfc374e9318587336d
+]
+-src/main/java/co/com/sofka/task/DoDelete.java,4\f\4fb96395dcba5b3a4b717560ebb3ff2a0c0f39a5
+q
+Asrc/test/java/co/com/sofka/runners/singleuser/SingleUserTest.java,3\0\3037e7e0013a3590b8878e4269cae6053c213e5a
+i
+9src/test/java/co/com/sofka/runners/update/UpdateTest.java,5\7\5710cbeae801599380b9f02d3eb7701d2dc34069
+ƒ
+Ssrc/test/java/co/com/sofka/stepdefinitions/singleuser/singleUserStepDefinition.java,9\0\9086e2812ddae41885395c2d6d34c813d2f1eeb1
+|
+Lsrc/test/java/co/com/sofka/stepdefinitions/delete/DeleteStepDefinitions.java,d\9\d9c9c578b4123aa9fc53ada06fe314a88de72700
+€
+Psrc/test/java/co/com/sofka/stepdefinitions/update/UpdateClassStepDefinition.java,a\8\a864b96a9137482f22439de3b17c7634eee363b1

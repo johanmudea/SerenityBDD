@@ -1,0 +1,7 @@
+
+q
+java:S1450"VRemove the "headers" field and declare it as a local variable in the relevant methods.(­ú¤üÿÿÿÿ
+F
+java:S1068"+Remove this unused "headers" private field.(­ú¤üÿÿÿÿ
+z
+java:S1319"dThe type of "headers" should be an interface such as "Map" rather than the implementation "HashMap".(Ù­ªè
