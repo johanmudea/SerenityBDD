@@ -61,8 +61,8 @@ public class UpdateClassStepDefinition extends ServiceSetUp {
         );
 
     }
-    @Then("se debera ver un codigo de respuesta exitoso.")
-    public void seDeberaVerUnCodigoDeRespuestaExitoso() {
+    @Then("se debera ver un codigo de respuesta exitoso status.")
+    public void seDeberaVerUnCodigoDeRespuestaExitosoStatus() {
 
         LastResponse.received().answeredBy(actor).prettyPrint();
 
