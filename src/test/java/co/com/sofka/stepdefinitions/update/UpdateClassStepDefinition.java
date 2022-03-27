@@ -9,11 +9,10 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
 import net.serenitybdd.screenplay.rest.questions.LastResponse;
 import org.apache.http.HttpStatus;
-import org.apache.http.entity.ContentType;
 import org.apache.log4j.Logger;
 import org.hamcrest.Matchers;
+import io.restassured.http.ContentType;
 
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 
 import static co.com.sofka.questions.APIResponse.response;
@@ -40,7 +39,9 @@ public class UpdateClassStepDefinition extends ServiceSetUp {
 
         generalSetUp();
         actor.can(CallAnApi.at(BASE_URI));
-        headers.put("Content-Type", ContentType.APPLICATION_JSON);
+        headers.put("content-Type", ContentType.JSON);
+        LOGGER.info(ContentType.JSON);
+
 
         bodyRequest = defineBodyRequest(name, job);
         LOGGER.info(bodyRequest);
@@ -66,7 +67,7 @@ public class UpdateClassStepDefinition extends ServiceSetUp {
         LastResponse.received().answeredBy(actor).prettyPrint();
 
         actor.should(
-                seeThatResponse("Es status deberia ser: " + HttpStatus.SC_OK,
+                seeThatResponse("El status deberia ser: " + HttpStatus.SC_OK,
                         validatableResponse -> validatableResponse.statusCode(HttpStatus.SC_OK)
                 ),
                 seeThat("La respuesta deberia no ser nula: ", response(), Matchers.notNullValue())

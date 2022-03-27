@@ -2,7 +2,6 @@ package co.com.sofka.task;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.rest.interactions.Get;
 import net.serenitybdd.screenplay.rest.interactions.Put;
 
 import java.util.HashMap;

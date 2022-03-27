@@ -1,4 +1,4 @@
-package co.com.sofka.runners.update;
+package co.com.sofka.runners.singleuser;
 
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberSerenityRunner;
@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberSerenityRunner.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/update.feature"},
-        glue = {"co.com.sofka.stepdefinitions.update"}
-)
-public class UpdateTest {
+        features = {"src/test/resources/features/singleUser.feature"},
+        glue = {"co.com.sofka.stepdefinitions.singleuser"})
 
+
+public class SingleUserTest {
 }
